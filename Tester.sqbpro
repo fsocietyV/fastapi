@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/yolanda/Рабочий стол/Tester.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure query browser pragmas" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1064"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainAccounts"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE &quot;Accounts&quot; (
+	&quot;User_ID&quot;	INTEGER NOT NULL,
+	&quot;Login&quot;	TEXT,
+	&quot;Sub_stat&quot;	INTEGER,
+	&quot;Subscription_up&quot;	TEXT,
+	FOREIGN KEY(&quot;User_ID&quot;) REFERENCES &quot;Customer&quot;(&quot;Id&quot;)
+);
+CREATE TABLE &quot;Customer&quot; (
+	&quot;Id&quot;	INTEGER NOT NULL,
+	&quot;Name&quot;	TEXT NOT NULL,
+	&quot;Surname&quot;	TEXT NOT NULL,
+	&quot;Sub_Status&quot;	INTEGER,
+	PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT)
+);
+CREATE TABLE &quot;Status&quot; (
+	&quot;ID_stat&quot;	INTEGER NOT NULL,
+	&quot;Status&quot;	TEXT,
+	PRIMARY KEY(&quot;ID_stat&quot; AUTOINCREMENT)
+);
+INSERT INTO Status (&quot;Status&quot;) VALUES('Active');
+INSERT INTO Status (&quot;Status&quot;) VALUES('Inactive');
+INSERT INTO Status (&quot;Status&quot;) VALUES('Banned');
+INSERT INTO Status (&quot;Status&quot;) VALUES('Not verified');
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Tony', 'Jackson', 1);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Aiden', 'Irving', 1);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Sebastian', 'Brooks', 2);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Makenzie', 'Walsh', 2);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Aisha', 'Clifford', 1);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Evie', 'Malone', 2);
+INSERT INTO Customer (Name, Surname, Sub_Status) VALUES('Isabel', 'Alcroft', 2);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, &quot;Subscription_up&quot;, Sub_stat) VALUES ('1', 'Tester_1@', '2022.01.07', 1);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, &quot;Subscription_up&quot;, Sub_stat) VALUES ('2', 'Tester_2@', '2022.04.05', 1);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, Sub_stat) VALUES ('3', 'Tester_3@', 2);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, Sub_stat) VALUES ('4', 'Tester_4@', 3);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, &quot;Subscription_up&quot;, Sub_stat) VALUES ('5', 'Tester_5@', '2022.03.02', 1);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, Sub_stat) VALUES ('6', 'Tester_6@', 3);
+INSERT INTO &quot;main&quot;.&quot;Accounts&quot; (&quot;User_ID&quot;, &quot;Login&quot;, Sub_stat) VALUES ('7', 'Tester_7@', 2);</sql><current_tab id="0"/></tab_sql></sqlb_project>
