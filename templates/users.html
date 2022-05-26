@@ -1,0 +1,10 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <ul>{% for entity in result %}
+    <li><a href="{{ entity['id'] }}">{{ entity['Login'] }} {{ entity['Subscription status'] }} {{ entity['subscription up'] }}</a></li>
+    {% endfor %}</ul>
+</body>
+</html>

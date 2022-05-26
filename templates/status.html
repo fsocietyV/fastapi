@@ -1,0 +1,10 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <ul>{% for entity in result %}
+    <li><a href="{{ entity['id'] }}">{{ entity['Status'] }}</a></li>
+    {% endfor %}</ul>
+</body>
+</html>
